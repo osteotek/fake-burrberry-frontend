@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Menu from './Menu';
+import Navigation from './Navigation';
 import Help from './Help';
 import Locale from './Locale';
 import FindMore from './FindMore';
@@ -14,7 +14,7 @@ const Footer = styled.footer`
 export default () =>
   <Footer>
     <div className="container">
-      <Menu />
+      <Navigation />
       <Locale />
       <Help />
       <FindMore />

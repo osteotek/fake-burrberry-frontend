@@ -1,22 +1,20 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import triangle from '../triangle.svg';
+import triangle from '../Assets/triangle.svg';
 
-const Wrapper = styled.section`padding: 0;`;
+const Wrapper = styled.div`
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+`;
 
 const Button = styled.button`
-  padding-top: 2rem;
-  padding-right: .5rem;
-  padding-bottom: 2rem;
-  padding-left: .5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 0;
   width: 100%;
   border: none;
   background: none;
   cursor: pointer;
-  @media screen and (min-width: 48rem) {
-    padding: 0;
-    line-height: 1.25rem;
-  }
 `;
 
 const Title = styled.h2`
@@ -45,28 +43,7 @@ const Title = styled.h2`
 `;
 
 const Content = styled.div`
-  margin-bottom: 2rem;
-  font-family: "Lora", serif;
-  font-size: .875rem;
-  line-height: 1.5rem;
-  color: #171717;
   display: ${props => (props.isOpened ? 'block' : 'none')};
-  @media screen and (min-width: 48rem) {
-    margin-top: 1rem;
-    margin-bottom: 0;
-  }
-  p,
-  ul {
-    margin: 0;
-    padding-top: 0;
-    padding-right: .5rem;
-    padding-bottom: 0;
-    padding-left: .5rem;
-    list-style-type: none;
-    @media screen and (min-width: 48rem) {
-      padding: 0;
-    }
-  }
 `;
 
 class Accordion extends Component {

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-const Menu = styled.nav`
+const Navigation = styled.nav`
   display: none;
   @media only screen and (min-width: 48rem) {
     display: block;
@@ -26,7 +26,7 @@ const Link = styled.a`
 `;
 
 export default props =>
-  <Menu>
+  <Navigation>
     <div className="row">
       <div className="col-md-3">
         <Title>CUSTOMER SERVICE</Title>
@@ -56,4 +56,4 @@ export default props =>
         <Link>Japan Only - SCTL indications</Link>
       </div>
     </div>
-  </Menu>;
+  </Navigation>;

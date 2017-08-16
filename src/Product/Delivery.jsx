@@ -3,18 +3,18 @@ import styled from 'styled-components';
 
 const Title = styled.div`
   margin: 0;
-  margin-bottom: 1rem;
   font-family: "Raleway", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.188rem;
   display: ${props => (props.hideTitle ? 'none' : 'block')};
+  @media (min-width: 62rem) {
+    margin-top: 4rem;
+  }
 `;
 
 const Subtitle = styled.div`
-  padding-top: 1rem
-  margin-top: 1rem;
-  margin-bottom: 0;
+  padding-top: 1rem;
   font-family: "Raleway", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-size: 0.75rem;
   font-weight: 700;
@@ -22,23 +22,24 @@ const Subtitle = styled.div`
 `;
 
 const Text = styled.div`
-  padding-bottom: 1.5rem;
+  padding-top: 0.4rem;
+  padding-bottom: 0.5rem;
   font-family: "Raleway", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-size: 0.75rem;
-  line-height: 1rem;
+  line-height: 1.33;
 `;
 
 const Image = styled.img`
   display: block;
   width: 100%;
+  margin: 0;
 `;
 
 const Wrapper = styled.div`
-  // display: none;
-  // @media only screen and (min-width: 48rem) {
-  //   padding-top: 1.45rem;
-  //   display: block;
-  // }
+  padding-top: 1rem;
+  @media (min-width: 48rem) {
+    padding-top: 2rem;
+  }
 `;
 
 class Delivery extends Component {
@@ -49,7 +50,7 @@ class Delivery extends Component {
           <div className="col-xs-12 col-md-7">
             <Image src="img/shipping.png" alt="Delivery" />
           </div>
-          <div className="col-xs-12 col-md-5">
+          <div className="col-xs-12 col-md-5 col-lg-offset-1 col-lg-4">
             <Title hideTitle={this.props.hideTitle}>DELIVERY</Title>
             <Subtitle>Free Next Day Delivery</Subtitle>
             <Text>

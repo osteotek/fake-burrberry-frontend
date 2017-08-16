@@ -3,14 +3,15 @@ import styled from 'styled-components';
 
 const Buttons = styled.div`
   padding-top: 1.4rem;
-  margin-left: -0.5rem;
-  margin-right: -0.5rem;
+  margin-left: 0;
+  margin-right: 0;
 `;
 
 const Button = styled.button`
-  padding-left: 1rem;
+  padding-left: 0;
   padding-top: 0.6rem;
   padding-bottom: 0.5rem;
+  padding-right: 1.5rem;
   font-family: Raleway, Helvetica Neue, Helvetica, Arial, serif;
   font-size: 0.75rem;
   line-height: 1.17;
@@ -18,17 +19,21 @@ const Button = styled.button`
   background-color: transparent;
   border: none;
   opacity: 0.6;
-  @media (min-width: 48rem) {
-    margin-left: inherit;
-  }
+  // @media (min-width: 48rem) {
+  //   margin-left: inherit;
+  // }
 `;
 
 class Locale extends Component {
   render() {
     return (
       <Buttons>
-        <Button type="button">Shipping country: Russian Federation</Button>
-        <Button type="button">Language: English</Button>
+        <Button>
+          Shipping country: <b>Russian Federation</b>
+        </Button>
+        <Button>
+          Language: <b>English</b>
+        </Button>
       </Buttons>
     );
   }
